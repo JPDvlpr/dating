@@ -22,3 +22,7 @@ div#main{
     margin: 10px;
     padding: 10px;
 }
+
+button{
+    float: right;
+}

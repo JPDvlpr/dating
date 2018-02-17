@@ -1,3 +1,9 @@
+<!--
+Jhakon Pappoe
+1/31/2018
+profile form that has more information
+including who they are seeking
+-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -21,21 +27,20 @@
         <h1 class="page-headers">Profile</h1>
         <hr>
 
-        <form class="form-horizontal" method="post" action="">
+        <form class="form-horizontal" method="post" action="#">
             <div class="row">
                 <div class="col-sm-6">
                     <div class="form-group form-group-sm">
 
-                        <label for="exampleInputEmail1" class="labels">Email</label>
+                        <label class="labels">Email</label>
                         <input type="email" name="email" class="form-control" id="exampleInputEmail1"
-                               aria-describedby="emailHelp"
-                               placeholder="Enter email">
+                               aria-describedby="emailHelp" placeholder="Enter email" value=" {{ @email }}">
                         <!--        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
                     </div>
 
                     <div class="form-group">
                         <form class="form-inline">
-                            <label class="labels" for="inlineFormCustomSelectPref">State</label>
+                            <label class="labels">State</label>
                             <select class="custom-select my-1 mr-sm-2" name="state" id="inlineFormCustomSelectPref">
                                 <option selected>Choose...</option>
                                 <option value="AL">Alabama</option>
@@ -93,29 +98,36 @@
                     </div>
 
                     <!-- seeking radial boxes-->
-                    <label class="labels" for="inputState">Seeking</label>
+                    <label class="labels">Seeking</label>
                     <div class="form-group">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="seeking" id="inlineRadio1"
-                                   value="option1">
-                            <label class="form-check-label" for="inlineRadio1">Male</label>
+                                   value="Male">
+                            <label class="form-check-label">Male</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="seeking" id="inlineRadio2"
-                                   value="option2">
-                            <label class="form-check-label" for="inlineRadio2">Female</label>
+                                   value="Female">
+                            <label class="form-check-label">Female</label>
                         </div>
                     </div>
+
+                    <div class="form-group">
+                        <button type="submit" name="submit" class="next-button">Next ></button>
+                    </div>
                 </div>
+
                 <div class="col-sm-6">
                     <div class="form-group">
-                        <label class="labels" for="exampleFormControlTextarea1"><strong>Biography</strong></label>
-                        <textarea class="form-control" name="bio" id="exampleFormControlTextarea1" rows="6"></textarea>
+                        <label class="labels"><strong>Biography</strong></label>
+                        <textarea class="form-control" name="bio" id="exampleFormControlTextarea1"
+                                  rows="6" value=" {{ @bio }}">
+
+                        </textarea>
                     </div>
                 </div>
             </div>
 
-            <button type="submit" class="next-button">Next ></button>
         </form>
     </fieldset>
 </div>

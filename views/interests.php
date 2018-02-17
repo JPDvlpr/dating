@@ -1,9 +1,7 @@
-<?php
-
-//error reporting
-error_reporting(E_ALL);
-ini_set("display_errors", 1);
-?>
+<!--Jhakon Pappoe
+1/31/2018
+interests form with checkboxes
+-->
 <!doctype html>
 <html lang="en">
 <head>
@@ -28,157 +26,53 @@ ini_set("display_errors", 1);
     <fieldset>
         <h1 class="page-headers">Interests</h1>
         <hr>
-        <form class="form-horizontal" method="post" action="">
+        <form class="form-horizontal" method="post" action="#">
             <label for="exampleInputEmail1" class="labels">In-Door Interests</label>
-            <check if="{{ isset(@errors['indoor'])}}">
-                <h2>{{@errors['indoor']}}</h2>
-            </check>
-            <div class="row">
-                <div class="col-sm-3">
-                    <div class="form-group form-group-sm">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="indoor"
-                                   value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">TV</label>
+
+            <div class="col-sm-12">
+                <div class="form-check">
+                    <repeat group="{{ @indoors }}" value="{{ @activity }}">
+                        <div class="col-3 float-left">
+                            <label class="form-check-label"><input class="form-check-label" type="checkbox"
+                                                                   name="indoors[]"
+                                                                   value="{{ @activity }}"
+                                <check if="!is_null({{ @indoor }})">
+
+                                    <check if="in_array({{ @activity }}, {{ @indoor }})">checked</check>
+
+                                </check>
+                                >
+                                {{ @activity }}
+                            </label>
                         </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="form-group form-group-sm">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="indoor"
-                                   value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">Movies</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="form-group form-group-sm">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="indoor"
-                                   value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">Cooking</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="form-group form-group-sm">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="indoor"
-                                   value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">Board Games</label>
-                        </div>
-                    </div>
+                    </repeat>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-3">
-                    <div class="form-group form-group-sm">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="indoor"
-                                   value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Puzzles</label>
+            </br>
+            <h5>Out-door Interests</h5>
+
+            <div class="col-sm-12">
+                <div class="form-check">
+                    <repeat group="{{ @outdoors }}" value="{{ @activity }}">
+                        <div class="col-3 float-left">
+                            <label class="form-check-label"><input class="form-check-label" type="checkbox"
+                                                                   name="outdoors[]"
+                                                                   value="{{ @activity }}"
+                                <check if="!is_null({{ @outdoor }})">
+
+                                    <check if="in_array({{ @activity }}, {{ @outdoor }})">checked</check>
+
+                                </check>
+                                >
+                                {{ @activity }}
+                            </label>
                         </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="form-group form-group-sm">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="indoor"
-                                   value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">Reading</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="form-group form-group-sm">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="indoor"
-                                   value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">Playing Cards</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="form-group form-group-sm">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="indoor"
-                                   value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">Video Games</label>
-                        </div>
-                    </div>
+                    </repeat>
                 </div>
             </div>
-
-            <label for="exampleInputEmail1" class="labels">Out-Door Interests</label>
-            <check if="{{ isset(@errors['outdoor'])}}">
-                <h2>{{@errors['lname']}}</h2>
-            </check>
-            <div class="row">
-                <div class="col-sm-3">
-                    <div class="form-group form-group-sm">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="outdoor"
-                                   value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Hiking</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="form-group form-group-sm">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="outdoor"
-                                   value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">Biking</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="form-group form-group-sm">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="outdoor"
-                                   value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">Swimming</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="form-group form-group-sm">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="outdoor"
-                                   value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">Collecting</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-3">
-                    <div class="form-group form-group-sm">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="outdoor"
-                                   value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Walking</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="form-group form-group-sm">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="outdoor"
-                                   value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">Climbing</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button type="submit" class="next-button">Next ></button>
-
-</div>
-
-</form>
-
-</fieldset>
+            <button type="submit" name="submit" class="btn btn-primary float-right">Next ></button>
+        </form>
+    </fieldset>
 </div>
 
 <!-- Bootstrap JavaScript-->

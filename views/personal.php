@@ -1,3 +1,8 @@
+<!--
+Jhakon Pappoe
+1/31/2018
+personal page with the main user information
+-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -23,15 +28,15 @@
         <h1 class="page-headers">Personal Information11111</h1>
         <hr>
 
-        <form class="form-horizontal" method="post" action="">
+        <form class="form-horizontal" method="post" action="#">
             <div class="row">
                 <div class="col-sm-8">
                     <div class="form-group form-group-sm">
                         <check if="{{ isset(@errors['fname'])}}">
                             <h2>{{@errors['lname']}}</h2>
                         </check>
-                        <label class="labels" >First Name</label>
-                        <input type="text" name="fname" class="form-control">
+                        <label class="labels">First Name</label>
+                        <input type="text" name="fname" class="form-control" value="{{ @fname }}">
                     </div>
 
                     <div class="form-group">
@@ -39,19 +44,19 @@
                             <h2>{{@errors['lname']}}</h2>
                         </check>
                         <label class="labels">Last Name</label>
-                        <input type="text" name="lname" class="form-control">
+                        <input type="text" name="lname" class="form-control" value="{{ @lname }}">
                     </div>
 
-                    <div class="form-group">
+                    <div class=" form-group">
                         <label class="labels">Age</label>
                         <check if="{{ isset(@errors['age'])}}">
                             <h2>{{@errors['age']}}</h2>
                         </check>
-                        <input type="text" name="age" class="form-control">
+                        <input type="text" name="age" class="form-control" value="{{ @age }}">
                     </div>
 
                     <!-- Gender radial boxes-->
-                    <div class="form-group">
+                    <div class=" form-group">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="gender" id="inlineRadio1"
                                    value="male">
@@ -73,12 +78,19 @@
                         <check if="{{ isset(@errors['phone'])}}">
                             <h2>{{@errors['phone']}}</h2>
                         </check>
-                        <input type="phone_number" class="form-control" name="phone" id="phone" placeholder="555-555-5555">
+                        <input type="phone_number" class="form-control" name="phone" id="phone"
+                               placeholder="555-555-5555" value="{{ @phone }}">
                     </div>
-                </div>
 
-                <div class="col-sm-4">
-                    <div class="form-group">
+                    <label class=" labels">Premium Membership</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="premium" id="defaultCheck1">
+                            <label class="form-check-label">Sign me up for a premium account!</label>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="form-group">
                             <p class="form-control" id="privacy-fieldset" type="text" readonly><strong>Note:</strong>
                                 All
                                 information entered is protected by our
@@ -86,14 +98,15 @@
                                 your
                                 permission.
                             </p>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <button type="submit" name="submit" class="next-button">Next ></button>
-            </div>
+
+                    <div class="form-group">
+                        <button type="submit" name="submit" class="next-button">Next ></button>
+                    </div>
         </form>
     </fieldset>
+</div>
 </div>
 
 <!-- Bootstrap JavaScript-->

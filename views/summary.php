@@ -1,10 +1,8 @@
-<?php
-//error reporting
-error_reporting(E_ALL);
-ini_set("display_errors", 1);
-
-//var_dump($_SESSION);
-?>
+<!--
+Jhakon Pappoe
+1/31/2018
+a summary of the users input
+-->
 <!doctype html>
 <html lang="en">
 <head>
@@ -22,7 +20,6 @@ ini_set("display_errors", 1);
 <body>
 <div class="container">
     <fieldset>
-<!--        <form class="form-horizontal" method="get" action="#">-->
             <div class="row">
                 <div class="col-sm-6">
                     <div class="form-group">
@@ -51,7 +48,7 @@ ini_set("display_errors", 1);
                             </tr>
                             <tr>
                                 <td>
-                                    <label class="summary-labels">Email: {{@email}}</label>
+                                    <label class="summary-labels">Email: {{@$_SESSION['email']}}</label>
 
                                 </td>
                             </tr>

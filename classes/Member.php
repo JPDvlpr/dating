@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Class Member
+ * Used for normal accounts
+ * has getter setters
+ * constructor and fields
+ */
 class Member
 {
     protected $fname, $lname, $age, $gender, $phone,

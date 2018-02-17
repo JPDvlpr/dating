@@ -9,7 +9,7 @@ p{
     font-style: normal;
 }
 
-img{
+.home-image{
     height: -webkit-fill-available !important;
     width: -webkit-fill-available !important;
 }
@@ -23,6 +23,49 @@ div#main{
     padding: 10px;
 }
 
-button{
-    float: right;
+p#privacy-fieldset{
+    margin-top: 10% !important;
+    background-color: transparent !important;
+    border: none;
+}
+
+#create{
+    margin: 0 auto !important;
+    display: block !important;
+}
+
+.labels{
+    font-weight: bold;
+}
+.page-headers{
+    text-align: left !important;
+}
+
+fieldset{
+    border: 2px solid rgba(223, 223, 255, 0.76) !important;
+    border-radius: 5px !important;
+    margin-top: 3% !important;
+    padding: 5% !important;
+}
+.navbar{
+    color:gray !important;
+}
+
+.col-sm-3{
+padding-left: 5% !important;
+}
+
+table,tr {
+    width: 100% !important;
+    border: 2px solid lightgray !important;
+}
+.summary-pic{
+    max-width: -webkit-fill-available !important;
+    margin: 0% !important;
+    padding: 0% !important;
+}
+
+td {
+    padding: 2% !important;
+    padding-top: 4% !important;
 }

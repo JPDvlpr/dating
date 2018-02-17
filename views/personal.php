@@ -102,7 +102,7 @@ personal page with the main user information
                     </div>
 
                     <div class="form-group">
-                        <button type="submit" name="submit" class="next-button">Next ></button>
+                        <button type="submit" name="submit" class="btn btn-primary float-right">Next ></button>
                     </div>
         </form>
     </fieldset>

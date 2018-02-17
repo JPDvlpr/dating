@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Class PremiumMember
+ * has
+ */
 class PremiumMember extends Member
 {
     protected $inDoorInterests = [];

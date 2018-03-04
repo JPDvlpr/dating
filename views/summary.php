@@ -18,6 +18,12 @@ a summary of the users input
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
+<nav class="navbar bg-light navbar-light">
+    <nav class="navbar navbar-light bg-light">
+        <a class="nav-item nav-link" href="/328/dating/">Infinity Dating Website</a>
+        <a class="nav-item nav-link" href="admin">Admin</a>
+    </nav>
+</nav>
 <div class="container">
     <fieldset>
             <div class="row">

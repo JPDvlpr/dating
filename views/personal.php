@@ -20,8 +20,11 @@ personal page with the main user information
 </head>
 <body>
 
-<nav class="navbar navbar-light bg-light">
-    <h4 class="navbar">Infinity Dating Website</h4>
+<nav class="navbar bg-light navbar-light">
+    <nav class="navbar navbar-light bg-light">
+        <a class="nav-item nav-link" href="/328/dating/">Infinity Dating Website</a>
+        <a class="nav-item nav-link" href="admin">Admin</a>
+    </nav>
 </nav>
 <div class="container">
     <fieldset>

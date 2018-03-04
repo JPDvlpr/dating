@@ -8,10 +8,18 @@
  */
 class Member
 {
-    protected $fname, $lname, $age, $gender, $phone,
-        $email, $state, $seeking, $bio;
+    protected $fname, $lname, $age, $gender, $phone, $email, $state, $seeking, $bio;
 
     //Default constructor
+
+    /**
+     * Member constructor.
+     * @param $fname
+     * @param $lname
+     * @param $age
+     * @param $gender
+     * @param $phone
+     */
     public function __construct($fname, $lname, $age, $gender, $phone)
     {
         $this->fname = $fname;

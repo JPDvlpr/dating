@@ -7,7 +7,7 @@
 class PremiumMember extends Member
 {
     protected $inDoorInterests = [];
-    protected $outdoorInterests = [];
+    protected $outDoorInterests = [];
 
     /**
      * @return array
@@ -30,7 +30,7 @@ class PremiumMember extends Member
      */
     function getOutdoorInterests()
     {
-        return $this->outdoorInterests;
+        return $this->outDoorInterests;
     }
 
     /**

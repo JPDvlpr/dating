@@ -19,8 +19,11 @@ including who they are seeking
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 </head>
-<nav class="navbar navbar-light bg-light">
-    <h4 class="navbar">Infinity Datin Website</h4>
+<nav class="navbar bg-light navbar-light">
+    <nav class="navbar navbar-light bg-light">
+        <a class="nav-item nav-link" href="/328/dating/">Infinity Dating Website</a>
+        <a class="nav-item nav-link" href="admin">Admin</a>
+    </nav>
 </nav>
 <div class="container">
     <fieldset>
